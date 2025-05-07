@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>21 Blackjack Online</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="age-popup">
+  <div class="popup-content">
+    <h2>Você tem 18 anos ou mais?</h2>
+    <button id="btn-sim">Sim</button>
+    <button id="btn-nao">Não</button>
+  </div>
+</div>
+
+  <h1>21 Blackjack Online</h1>
+  <div class="game-container">
+    <div id="setup">
+      <h2>Início da Partida</h2>
+      <form id="start-form">
+        <label>Quantidade de Rodadas (mínimo 3):</label>
+        <input type="number" id="rounds" min="3" value="3" required><br>
+
+        <label>Timeout por Jogada (segundos):</label>
+        <input type="number" id="timeout" min="5" value="30" required><br>
+
+        <label>Quantidade de Jogadores (2 a 4):</label>
+        <input type="number" id="num-players" min="2" max="4" value="2" required><br>
+
+        <div id="player-names"></div>
+
+        <button type="submit">Começar Partida</button>
+      </form>
+    </div>
+
+    <div id="game" style="display:none;">
+      <div id="players-area"></div>
+      <div id="dealer-area" class="player">
+        <h3><img src="img/dealer.png" class="avatar"> Banca</h3>
+        <div class="cards" id="dealer-cards"></div>
+      </div>
+      <div id="controls"></div>
+      <div id="scoreboard"></div>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
